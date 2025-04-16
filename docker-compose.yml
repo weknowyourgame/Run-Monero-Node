@@ -1,0 +1,19 @@
+version: "1.0"
+
+services:
+  monero-node:
+    build: .
+    container_name: monero-node
+    ports:
+      - "18080:18080"
+      - "18089:18089"
+      - "9050:9050"
+    volumes:
+      - monero_data:/home/monero/.bitmonero
+    restart: always
+    tty: true
+    cap_add:
+      - NET_ADMIN
+
+volumes:
+  monero_data:
