@@ -1,6 +1,6 @@
 FROM debian:bullseye
 
-LABEL maintainer="you@example.com"
+LABEL version="1.0"
 
 ENV MONERO_VERSION=0.18.3.1
 ENV USER=monero
